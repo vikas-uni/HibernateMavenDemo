@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- db specific information -->
+		<property name="hibernate.connection.driver_class">
+			com.microsoft.sqlserver.jdbc.SQLServerDriver
+		</property>
+		<property name="hibernate.connection.url">
+			jdbc:sqlserver://VIKASGOND:1433;databaseName=MyDB
+		</property>
+		<property name="hibernate.connection.username">sa</property>
+		<property name="hibernate.connection.password">Nagarro@12345</property>
+		
+		<!-- <property name="hibernate.connection.driver_class">
+			com.mysql.jdbc.Driver
+		</property>
+		<property name="hibernate.connection.url">
+			jdbc:mysql://localhost:3306/testDB
+		</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.connection.password">root@123</property> -->
+		
+		<!-- Hibernate specific information -->
+		<property name="show_sql">true</property>
+		<!-- org.hibernate.dialect.OracleDialect -->
+		<!-- <property name="dialect">org.hibernate.dialect.Oracle9Dialect</property> -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- If you don't want to define transaction in your application, you can 
+			set the "autocommit" property to true (which is false by default) in your 
+			XML configuration file. In this case, each single update will be committed 
+			to the database immediately. 
+			<property name="connection.autocommit">true</property> 
+			(Should be placed in hibernate.cfg.xml)One more thing to notice for auto 
+			commit is that you must flush your session before closing it. It is because 
+			Hibernate won't write your changes to the database immediately. Instead, 
+			it will queue a number of statements to increase performance. -->
+		<property name="connection.autocommit">true</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<mapping resource="com/mapping/Employee.hbm.xml"></mapping>
+	</session-factory>
+</hibernate-configuration>

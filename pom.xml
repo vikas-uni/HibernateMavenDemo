@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>demo.hibernate</groupId>
+	<artifactId>HibernateMavenDemo</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<dependencies>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>4.3.6.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.common</groupId>
+			<artifactId>hibernate-commons-annotations</artifactId>
+			<version>4.0.4.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>com.microsoft.sqlserver</groupId>
+			<artifactId>sqljdbc4</artifactId>
+			<version>4.0</version>
+			<!-- <scope>test</scope> -->
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.17</version>
+		</dependency>
+
+
+	</dependencies>
+	
+	<repositories>
+    <repository>
+      <id>my-repo1</id>
+      <name>your custom repo</name>
+      <url>https://clojars.org/repo/</url>
+    </repository>
+   
+  </repositories>
+
+	<modules>
+		<module>HibernateMaven1Simple</module>
+		<module>HibernateMaven2Annotation</module>
+		<module>HibernateMaven3ClassHierarchy</module>
+		<module>HibernateMaven4Componentmapp</module>
+		<module>HibernateMaven5Leve1Cache</module>
+		<module>HibernateMaven6Level2Cache</module>
+		<module>HibernateMaven7OneToOnePKFK</module>
+		<module>HibernateMaven8oneToM-bi</module>
+		<module>HibernateMaven9oneToM-uni</module>
+		<module>HibernateMaven10OneToM-Bi</module>
+		<module>HibernateMaven11OneToMJoinTable</module>
+		<module>HibernateMaven12HQL</module>
+		<module>HibernateMaven13M2Mbi</module>
+		<module>HibernateMaven14OptimisticLocking</module>
+	</modules>
+</project>
